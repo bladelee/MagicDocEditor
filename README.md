@@ -6,7 +6,8 @@ For Chinese documentation, please refer to [README-cn.md](README-cn.md)
 
 A lightweight document tool that integrates **embedded integration, AI intelligent creation, offline editing, cloud synchronization, and template generation**, seamlessly embeddable in multi-platform applications.
 
-![Image](https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/4d0771c7c9cc42ee841b148b8b22ad85.png~tplv-noop.jpeg?rk3s=49177a0b&x-expires=1768645027&x-signature=kLb%2FvkAK6rG46h77ni2oPdoHXlA%3D&resource_key=fe7820ca-5e9f-46a8-aeb2-8cd9e57eddfe&resource_key=fe7820ca-5e9f-46a8-aeb2-8cd9e57eddfe)
+![readme](https://github.com/user-attachments/assets/568188e8-0589-4cee-a81c-93a1396844c0)
+
 
 ## Core Features
 
