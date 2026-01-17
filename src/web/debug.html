@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debug Test</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      #test {
+        padding: 20px;
+      }
+      .box {
+        padding: 20px;
+        margin: 10px 0;
+        border: 2px solid #333;
+      }
+      .success {
+        background: #4caf50;
+        color: white;
+      }
+      .error {
+        background: #f44336;
+        color: white;
+      }
+      .info {
+        background: #2196f3;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test"></div>
+
+    <script>
+      const test = document.getElementById('test');
+
+      function log(message, type = 'info') {
+        const div = document.createElement('div');
+        div.className = `box ${type}`;
+        div.textContent = message;
+        test.appendChild(div);
+      }
+
+      log('Starting diagnostic tests...', 'info');
+
+      // Test 1: JavaScript is working
+      log('✓ JavaScript is working', 'success');
+
+      // Test 2: DOM is accessible
+      const appDiv = document.createElement('div');
+      appDiv.id = 'app';
+      document.body.appendChild(appDiv);
+      log('✓ DOM manipulation works', 'success');
+
+      // Test 3: Try to load the React bundle
+      log('Testing module loading...', 'info');
+
+      import('./assets/index-DcWYWj_N.js')
+        .then(() => {
+          log('✓ Module loaded successfully!', 'success');
+          setTimeout(() => {
+            if (document.getElementById('app').children.length > 0) {
+              log('✓ React rendered content!', 'success');
+            } else {
+              log('✗ Module loaded but React did not render', 'error');
+            }
+          }, 1000);
+        })
+        .catch(error => {
+          log(`✗ Module loading failed: ${error.message}`, 'error');
+          console.error('Module error:', error);
+        });
+
+      // Test 4: Check browser support
+      if ('noModule' in HTMLScriptElement.prototype) {
+        log('✓ Browser supports ES modules', 'success');
+      } else {
+        log('✗ Browser does not support ES modules', 'error');
+      }
+    </script>
+  </body>
+</html>

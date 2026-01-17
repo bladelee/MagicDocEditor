@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "paths": {
+      "@/*": ["./src/*"],
+      "@src/*": ["./src/*"],
+      "@web/*": ["./src/web/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@config/*": ["./src/config/*"],
+
+      "@blocksuite/affine": ["../blocksuite/affine"],
+      "@blocksuite/affine-block-root": ["../blocksuite/affine-block-root"],
+      "@blocksuite/affine-components": ["../blocksuite/affine-components"],
+      "@blocksuite/affine-shared": ["../blocksuite/affine-shared"],
+      "@blocksuite/global": ["../blocksuite/framework/global"],
+      "@blocksuite/std": ["../blocksuite/framework/std"],
+      "@blocksuite/icons": ["../blocksuite/presets/icons"],
+      "@blocksuite/affine-ext-loader": ["../blocksuite/affine-ext-loader"],
+
+      "@affine/core": ["../packages/frontend/core/src"],
+      "@affine/component": ["../packages/frontend/component/src"],
+      "@affine/env": ["../packages/frontend/env/src"],
+      "@affine/i18n": ["../packages/frontend/i18n/src"],
+      "@affine/nbstore": ["../packages/common/nbstore/src"],
+      "@affine/track": ["../packages/frontend/track"],
+      "@toeverything/infra": ["../packages/common/infra/src"]
+    }
+  },
+  "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"],
+  "references": [
+    { "path": "../../blocksuite" },
+    { "path": "../../packages/frontend/core" },
+    { "path": "../../packages/frontend/component" },
+    { "path": "../../packages/common/nbstore" }
+  ]
+}

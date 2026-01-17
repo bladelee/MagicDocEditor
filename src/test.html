@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Test</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const { createRoot } = ReactDOM;
+      const rootElement = document.getElementById('app');
+      const root = createRoot(rootElement);
+      root.render(
+        React.createElement(
+          'div',
+          {
+            style: {
+              padding: '50px',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              minHeight: '100vh',
+            },
+          },
+          React.createElement('h1', null, '🎉 React is Working!'),
+          React.createElement(
+            'p',
+            null,
+            'If you see this, React is loaded correctly.'
+          )
+        )
+      );
+    </script>
+  </body>
+</html>
